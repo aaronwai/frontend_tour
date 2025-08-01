@@ -108,6 +108,7 @@ span {
   left: 0;
   width: 100%;
   z-index: 1;
+  box-shadow: var(--dark-shadow);
 }
 
 .navbar .logo {
@@ -125,6 +126,10 @@ span {
   display: flex;
   gap: 1.5rem;
   align-items: center;
+  a {
+    color: var(--primary-4);
+    font-size: 1.2rem;
+  }
 }
 
 .navbar .mobile-menu-items {
@@ -418,3 +423,60 @@ span {
   }
 }
 /* tours */
+.tours {
+  padding: 2rem;
+}
+
+.cards {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+  justify-content: center;
+}
+
+.card {
+  box-shadow: var(--dark-shadow);
+}
+.card:hover {
+  transform: scale(1.03);
+  transition: var(--transition);
+}
+.card-img {
+  position: relative;
+}
+.card-img p {
+  position: absolute;
+  background: var(--primary-7);
+  padding: 2px;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  z-index: 1;
+}
+
+.card-content {
+  background: var(--primary-9);
+  padding: 1.5rem 2rem 0.5rem;
+  p {
+    font-size: 1rem;
+    color: var(--primary-7);
+  }
+  ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 799px) and (min-width: 577px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 576px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
